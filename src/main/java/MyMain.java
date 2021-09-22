@@ -11,8 +11,8 @@ public class MyMain {
     //    int[] arr2 = {2, 4, 6};
     //    int[] arr3 = addArrays3(arr1, arr2); // arr3 = [3, 7, 11]
     public static int[] addArrays3(int[] arr1, int[] arr2) {
-        // REPLACE THIS WITH YOUR CODE
-        return null;
+        int [] arr_sum = {(arr1[0] + arr2[0]), (arr1[1] + arr2[1]), (arr1[2] + arr2[2])};
+        return arr_sum;
     }
 
     // Arrays Basics Problem 2:
@@ -23,8 +23,10 @@ public class MyMain {
     // int[] arr1 = {1, 3, 5};
     // double[] arr2 = average3(arr1); // arr2 = [3.0, 3.0, 3.0]
     public static double[] average3(int[] arr) {
-        // REPLACE THIS WITH YOUR CODE
-        return null;
+        double sum_array = arr[0] + arr[1] + arr[2];
+        double avg = sum_array/3;
+        double [] avg_array = {avg, avg, avg};
+        return avg_array;
     }
 
     // Iteration Problem 1:
@@ -34,8 +36,11 @@ public class MyMain {
     // int[] nums = {1, 6, 2, 6, 8, 2, 3, 9, 3};
     // int x = sum(nums); // x = 40
     public static int sum(int[] arr) {
-        // REPLACE THIS WITH YOUR CODE
-        return -1;
+        int ans = 0;
+        for (int i = 0; i < arr.length; i++){
+            ans += arr[i];
+        }
+        return ans;
     }
 
     // Iteration Problem 2:
@@ -45,8 +50,17 @@ public class MyMain {
     // int[] nums = {1, 6, 2, 6, 8, 2, 3, 9, 3};
     // int x = max(nums); // x = 9
     public static int max(int[] arr) {
-        // REPLACE THIS WITH YOUR CODE
-        return -1;
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length; i++){
+
+            if (arr[i] > max){
+                max = arr[i];
+            }
+            else {
+                max = max;
+            }
+        }
+        return max;
     }
 
     // Challenge Problem:
@@ -57,10 +71,13 @@ public class MyMain {
     // Example:
     // makeRandomArray(10, 1, 5) => [4, 2, 3, 1, 5, 3, 4, 4, 1, 2]
     public static int[] makeRandomArray(int size, int lowest, int biggest) {
-        // REPLACE THIS WITH YOUR CODE
-        return null;
+        int[] rand_array = new int[size];
+        for (int i = 0; i < rand_array.length; i++) {
+            int random = (int) (Math.random() *(biggest - lowest) + lowest);
+            rand_array [i] = random;
+        }
+        return rand_array;
     }
-
 
     public static void main(String[] args) {
         System.out.println("addArrays3 Tests:");
